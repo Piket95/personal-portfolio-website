@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennis Adam - Software Engineer</title>
+	
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="/assets/fontawesome/css/solid.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Custom JS -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="section code-bg">
+        <div id="title">
+            <p><span class="green-text">&lt;/&gt;</span> Dennis Adam</p>
+        </div>
+        <div id="diagonal-line">
+            <div id="line"></div>
+        </div>
+        <div id="iAm">
+            <h2>Hey! I'm a</h2>
+            <h2 class="typewriter green-text">software engineer</h2>
+        </div>
+        <div id="arrow">
+            <i class="fa-solid fa-arrow-down" style="font-size: 2rem; color: #818181; padding-top: 4rem;"></i>
+        </div>
+    </section>
+
+    <section id="about" class="section about-me">
+        <img src="https://img.pr0gramm.com/2023/10/17/4b0bb7460b7e495b.jpg" alt="Dennis Adam">
+        <div>
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <p>This is where you'd list your skills.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p>This is where you'd showcase your projects.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>This is where you'd put your contact information.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const sectionsArr = Array.from(sections);
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const scrollEventStates = {
+                lastKnownScrollPosition: 0,
+                listenToScrollEvents: true,
+                targetScrollOffset: 0
+            }
+
+            function smoothScroll(target) {
+                const element = document.querySelector(target);
+
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = link.getAttribute('href');
+                    smoothScroll(target);
+                    console.log(link);
+                    setActiveLink(link);
+                });
+            });
+
+            function setActiveLink(activeNavElement) {                
+                navLinks.forEach((link) => link.classList.remove('active'));
+                activeNavElement.classList.add('active');
+            }
+
+            window.addEventListener('scroll', (event) => {
+                if (scrollEventStates.listenToScrollEvents) {
+                    // disable scroll events until target section is reached
+                    scrollEventStates.listenToScrollEvents = false;
+                    
+                    if (scrollEventStates.lastKnownScrollPosition < window.scrollY) {
+                        // find next section below current position
+                        let nextSections = sectionsArr.filter(section => section.offsetTop > scrollEventStates.lastKnownScrollPosition);
+                        scrollEventStates.targetScrollOffset = nextSections[0].offsetTop;
+
+                        window.scrollTo({
+                            top: scrollEventStates.targetScrollOffset,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // find next section below current position
+                        let nextSections = sectionsArr.filter(section => section.offsetTop < scrollEventStates.lastKnownScrollPosition);
+                        scrollEventStates.targetScrollOffset = nextSections[nextSections.length - 1].offsetTop;
+
+                        window.scrollTo({
+                            top: scrollEventStates.targetScrollOffset,
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    scrollEventStates.lastKnownScrollPosition = scrollEventStates.targetScrollOffset;
+                }
+
+                // allow listening to scroll events again when target section is reached
+                if (window.scrollY === scrollEventStates.targetScrollOffset) {
+                    scrollEventStates.listenToScrollEvents = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
