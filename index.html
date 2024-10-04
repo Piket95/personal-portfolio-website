@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="index.css">
 
     <!-- Custom JS -->
+    <script src="scripts/careerTypeWriter.js"></script>
 </head>
 <body>
     <nav>
@@ -40,7 +41,7 @@
         </div>
         <div id="iAm">
             <h2>Hey! I'm a</h2>
-            <h2 class="typewriter green-text">software engineer</h2>
+            <h2 class="typewriter green-text"></h2>
         </div>
         <div id="arrow">
             <i class="fa-solid fa-arrow-down" style="font-size: 2rem; color: #818181; padding-top: 4rem;"></i>
@@ -96,7 +97,6 @@
                     e.preventDefault();
                     const target = link.getAttribute('href');
                     smoothScroll(target);
-                    console.log(link);
                     setActiveLink(link);
                 });
             });
@@ -139,6 +139,8 @@
                     scrollEventStates.listenToScrollEvents = true;
                 }
             });
+
+            typeCareers(); // scripts/careerTypeWriter.js
         });
     </script>
 </body>

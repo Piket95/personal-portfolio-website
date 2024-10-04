@@ -151,11 +151,10 @@ h1 {
 
 #iAm {
     position: relative;
-    right: 10rem;
-    bottom: 2rem;
     grid-column: 3;
     grid-row: 2;
     font-size: 1.2rem;
+    width: 100%;
 }
 
 #arrow {
