@@ -128,8 +128,12 @@ h1 {
     grid-row: 1;
 }
 
-#title p {
+#title > p {
     font-size: 4rem;
+    font-weight: 600;
+    position: relative;
+    top: 3rem;
+    left: 2rem;
 }
 
 #diagonal-line {
@@ -150,11 +154,15 @@ h1 {
 }
 
 #iAm {
-    position: relative;
     grid-column: 3;
     grid-row: 2;
     font-size: 1.2rem;
     width: 100%;
+}
+
+#iAm > p {
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 
 #arrow {
