@@ -77,9 +77,9 @@
             const sectionsArr = Array.from(sections);
             const navLinks = document.querySelectorAll('nav ul li a');
             const scrollEventStates = {
-                lastKnownScrollPosition: 0,
+                lastKnownScrollPosition: window.scrollY == 0 ? 0 : window.scrollY + 1,
                 listenToScrollEvents: true,
-                targetScrollOffset: 0
+                targetScrollOffset: window.scrollY == 0 ? 0 : window.scrollY + 1,
             }
 
             function smoothScroll(target) {
