@@ -123,17 +123,14 @@ h1 {
     align-items: center;
 }
 
-#titel {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#title > p {
+#title {
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
     font-size: 4rem;
     font-weight: 600;
-    position: relative;
-    top: 3rem;
-    left: 2rem;
+
+    transition: all .5s ease-in-out;
 }
 
 #diagonal-line {
