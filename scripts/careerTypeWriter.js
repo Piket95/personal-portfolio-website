@@ -6,7 +6,7 @@ const typeWriterMode = {
 
 function typeCareers() {
     const careers = ['software engineer', 'fullstack web developer', 'tech enthusiast', 'hobby dev ops engineer', 'UI/UX designer'];
-    const careerElement = document.querySelector('#iAm .typewriter');
+    const careerElement = document.querySelector('#i-am .typewriter');
     let previousElement = null;
     let newRandomCareer = careers[Math.floor(Math.random() * careers.length)];
     let intervalTimeout = 10000;
