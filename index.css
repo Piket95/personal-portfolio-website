@@ -11,23 +11,18 @@ body {
     line-height: 1.6;
 }
 
-.section {
+section {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 2rem;
-    padding-top: 70px;
 }
 
 nav {
     position: fixed;
     top: 0;
-    right: 3rem;
-    width: 100%;
+    width: 100vw;
     min-height: 60px;
     background-color: rgba(30, 30, 30);
-    padding: 1rem;
+    padding: 1rem 3rem;
     z-index: 1000;
 }
 
@@ -77,20 +72,6 @@ h1 {
     background-position: center;
 }
 
-.content-left {
-    position: relative;
-    z-index: 2;
-    max-width: 50%;
-}
-
-.content-right {
-    position: absolute;
-    right: 2rem;
-    bottom: 2rem;
-    text-align: right;
-    z-index: 2;
-}
-
 .about-me {
     display: flex;
     align-items: center;
@@ -113,14 +94,21 @@ h1 {
     color: white;
 }
 
-#home {
-    display: grid;
-    grid-template-columns: 1fr 0.3fr 1fr;
-    grid-template-rows: 1fr 1fr 0.3fr;
-    width: calc(100vw - 10px);;
-    height: 100vh;
-    justify-items: center;
-    align-items: center;
+.background {
+    position: fixed;
+}
+
+.background-flare {
+    min-height: 100vh;
+    width: calc(100vw - 10px);
+    /* background-image: radial-gradient(ellipse at right bottom, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 60%); */
+    background-image: radial-gradient(ellipse, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 60%);
+    z-index: -1;
+}
+
+.background-video {
+    object-fit: cover;
+    z-index: -2;
 }
 
 #title {
@@ -133,28 +121,33 @@ h1 {
     transition: all .5s ease-in-out;
 }
 
-#diagonal-line {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    flex-grow: 2;
-    width: 100%;
-    height: 100%;
+#home {
+
+}
+
+#home-content {
     display: flex;
-    justify-content: center;
+    margin-top: 5rem;
+    margin-left: 55rem;
+    height: 75vh;
+}
+
+#diagonal-line {
+    min-width: 10vw;
 }
 
 #line {
     background-color: #1b9c86;
     height: 100%;
     width: 0.7rem;
-    transform: rotate(20deg);;
+    transform: rotate(20deg);
+    margin: -10 0;
 }
 
 #iAm {
-    grid-column: 3;
-    grid-row: 2;
-    font-size: 1.2rem;
-    width: 100%;
+    position: relative;
+    top: 25rem;
+    left: 4rem
 }
 
 #iAm > p {
@@ -164,8 +157,7 @@ h1 {
 
 #arrow {
     position: relative;
-    grid-column: 2;
-    grid-row: 3;
+    padding: 0 50%;
     animation: MoveUpDown 1s linear infinite;
 }
 

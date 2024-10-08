@@ -35,20 +35,27 @@
         </ul>
     </nav>
 
-    <section id="home" class="section code-bg">
-        <div id="diagonal-line">
-            <div id="line"></div>
-        </div>
-        <div id="iAm">
-            <p>Hey! I'm a</p>
-            <p class="typewriter green-text"></p>
+    <div class="background background-flare"></div>
+    <video autoplay muted loop width="100%" height="100%" class="background background-video">
+        <source src="assets/2560 Aeon Fantasy 1108 Live Wallpaper_thf4.mp4" type="video/mp4">
+    </video>
+
+    <section id="home">
+        <div id="home-content">
+            <div id="diagonal-line">
+                <div id="line"></div>
+            </div>
+            <div id="iAm">
+                <p>Hey! I'm a</p>
+                <p class="typewriter green-text"></p>
+            </div>
         </div>
         <div id="arrow">
             <i class="fa-solid fa-arrow-down" style="font-size: 2rem; color: #818181; padding-top: 4rem;"></i>
         </div>
     </section>
 
-    <section id="about" class="section about-me">
+    <section id="about" class="about-me">
         <img src="https://img.pr0gramm.com/2023/10/17/4b0bb7460b7e495b.jpg" alt="Dennis Adam">
         <div>
             <h2>About Me</h2>
@@ -56,24 +63,24 @@
         </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="skills">
         <h2>Skills</h2>
         <p>This is where you'd list your skills.</p>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects">
         <h2>Projects</h2>
         <p>This is where you'd showcase your projects.</p>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact">
         <h2>Contact</h2>
         <p>This is where you'd put your contact information.</p>
     </section>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.section');
+            const sections = document.querySelectorAll('section');
             const sectionsArr = Array.from(sections);
             const navLinks = document.querySelectorAll('nav ul li a');
             const scrollEventStates = {
