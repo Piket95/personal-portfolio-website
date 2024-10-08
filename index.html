@@ -35,7 +35,8 @@
         </ul>
     </nav>
 
-    <div id="flare-background" class="background"></div>
+    <div id="flare-background-home" class="background flare-background"></div>
+    <div id="flare-background-about" class="background flare-background"></div>
     <video autoplay muted loop id="background-video" width="100%" height="100%" class="background">
         <source src="assets/2560 Aeon Fantasy 1108 Live Wallpaper_thf4.mp4" type="video/mp4">
     </video>
@@ -83,9 +84,10 @@
     <script>
         const sectionsArr = Array.from(document.querySelectorAll('section'));
         const title = document.getElementById('title');
+        const backgroundFlares = Array.from(document.querySelectorAll('.flare-background'));
 
-        // initTitlePosition
-        if (window.scrollY >= sectionsArr[1].offsetTop) {
+        // init title position
+        if (Math.ceil(window.scrollY) >= sectionsArr[1].offsetTop) {
             title.style.top = '1rem';
             title.style.left = '5rem';
             title.style.fontSize = '1.25rem';
@@ -93,6 +95,15 @@
             title.style.top = '15rem';
             title.style.left = '15rem';
             title.style.fontSize = '4rem';
+        }
+
+        // init gradient
+        if (Math.ceil(window.scrollY) < sectionsArr[1].offsetTop) {
+            // home
+            backgroundFlares[1].style.opacity = 0;
+        } else if (Math.ceil(window.scrollY) < sectionsArr[2].offsetTop) {
+            // about
+            backgroundFlares[0].style.opacity = 0;
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -166,6 +177,13 @@
                 } else {
                     moveTitle();
                 }
+                backgroundFlares.forEach(element => {
+                    if (element.id === 'flare-background-' + nextSection.id) {
+                        element.style.opacity = 1;
+                    } else {
+                        element.style.opacity = 0;
+                    }
+                });
 
                 lastKnownScrollPosition = window.scrollY;
             });
