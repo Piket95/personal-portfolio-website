@@ -79,15 +79,31 @@
     </section>
 
     <script>
+        const sections = document.querySelectorAll('section');
+        const sectionsArr = Array.from(sections);
+        const title = document.getElementById('title');
+
+        // initTitlePosition
+        if (window.scrollY >= sectionsArr[1].offsetTop) {
+            title.style.top = '1rem';
+            title.style.left = '5rem';
+            title.style.fontSize = '1.25rem';
+        } else {
+            title.style.top = '15rem';
+            title.style.left = '15rem';
+            title.style.fontSize = '4rem';
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section');
-            const sectionsArr = Array.from(sections);
             const navLinks = document.querySelectorAll('nav ul li a');
             const scrollEventStates = {
                 lastKnownScrollPosition: window.scrollY == 0 ? 0 : window.scrollY + 1,
                 listenToScrollEvents: true,
                 targetScrollOffset: window.scrollY == 0 ? 0 : window.scrollY + 1,
             }
+
+            // add transition for font-size in title here to prevent animation on loading
+            title.style.transition = 'top .5s, left .5s, font-size .5s';
 
             function smoothScroll(target) {
                 const element = document.querySelector(target);
@@ -113,9 +129,7 @@
                 activeNavElement.classList.add('active');
             }
 
-            function moveTitle(sectionHome = false) {
-                const title = document.getElementById('title');
-                
+            function moveTitle(sectionHome = false) {                
                 if (sectionHome) {
                     title.style.top = '15rem';
                     title.style.left = '15rem';
