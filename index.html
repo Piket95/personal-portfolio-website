@@ -317,7 +317,7 @@
         function fillSkillProgressBars(reset = false) {
             skillProgressBars.forEach(progressBar => {
                 if (reset) {
-                    progressBar.children.forEach(progressBarChild => {
+                    Array.from(progressBar.children).forEach(progressBarChild => {
                         progressBarChild.style.backgroundColor = 'rgb(60, 60, 60)';
                     });
                 } else {
