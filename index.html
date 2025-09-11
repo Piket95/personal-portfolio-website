@@ -38,7 +38,7 @@
     <div id="flare-background-home" class="background flare-background"></div>
     <div id="flare-background-about" class="background flare-background"></div>
     <video autoplay muted loop id="background-video" width="100%" height="100%" class="background">
-        <source src="assets/2560 Aeon Fantasy 1108 Live Wallpaper_thf4.mp4" type="video/mp4">
+        <source id="background-video-src" src="" type="video/mp4">
     </video>
 
     <main>
@@ -85,6 +85,10 @@
         const sectionsArr = Array.from(document.querySelectorAll('section'));
         const title = document.getElementById('title');
         const backgroundFlares = Array.from(document.querySelectorAll('.flare-background'));
+        const backgroundVideoSrc = document.getElementById('background-video-src');
+
+        // set background video
+        backgroundVideoSrc.src = "assets/2560 Aeon Fantasy 1108 Live Wallpaper_thf4.mp4";
 
         // init title position
         if (Math.ceil(window.scrollY) >= sectionsArr[1].offsetTop) {
