@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dennis Adam - Portfolio</title>
+    <meta name="description" content="Dennis Adam - Portfolio">
+    <meta name="keywords" content="Dennis Adam, Portfolio, Web Developer">
+    <meta name="author" content="Dennis Adam">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e1e1e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cdn.dennisadam.de/favicon.ico">
+
 	
     <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +35,10 @@
 <body>
     <nav>
         <div id="title">
-            <p><span class="green-text">&lt;/&gt;</span> Dennis Adam</p>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img id="logo" src="https://cdn.dennisadam.de/icons/generated-image%20%281%29.png" alt="Dennis Adam" style="margin-right: 1rem;">
+                <p style="margin: 0;">Dennis Adam</p>
+            </div>
         </div>
         <ul>
             <li><a href="#home" class="active">Home</a></li>
@@ -35,87 +49,152 @@
         </ul>
     </nav>
 
-    <div id="flare-background-home" class="background flare-background"></div>
-    <div id="flare-background-about" class="background flare-background"></div>
-    <video autoplay muted loop id="background-video" width="100%" height="100%" class="background">
+    <div id="flare-background" class="background flare-background" style="background-color: rgba(30, 30, 30);"></div>
+    <video autoplay muted loop disablePictureInPicture id="background-video" width="100%" height="100%" class="background">
         <source id="background-video-src" src="" type="video/mp4">
     </video>
 
     <main>
-        <section id="home">
-            <div id="home-content">
-                <div id="diagonal-line">
-                    <div id="line"></div>
+        <div class="scroller">
+            <section id="home">
+                <div id="home-content">
+                    <div id="diagonal-line">
+                        <div id="line"></div>
+                    </div>
+                    <div id="i-am">
+                        <p>Hey! I'm a</p>
+                        <p class="typewriter green-text"></p>
+                    </div>
                 </div>
-                <div id="i-am">
-                    <p>Hey! I'm a</p>
-                    <p class="typewriter green-text"></p>
+                <div id="arrow">
+                    <i class="fa-solid fa-arrow-down" style="font-size: 2rem; color: #818181; padding-top: 4rem;"></i>
                 </div>
-            </div>
-            <div id="arrow">
-                <i class="fa-solid fa-arrow-down" style="font-size: 2rem; color: #818181; padding-top: 4rem;"></i>
-            </div>
-        </section>
-    
-        <section id="about" class="about-me">
-            <div class="profile-image-container">
-                <img src="https://img.pr0gramm.com/2023/10/17/4b0bb7460b7e495b.jpg" alt="Dennis Adam">
-            </div>
-            <div>
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            </div>
-        </section>
-    
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>This is where you'd list your skills.</p>
-        </section>
-    
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>This is where you'd showcase your projects.</p>
-        </section>
-    
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>This is where you'd put your contact information.</p>
-        </section>
+            </section>
+        
+            <section id="about" class="about-me">
+                <div class="profile-image-container">
+                    <img src="https://img.pr0gramm.com/2023/10/17/4b0bb7460b7e495b.jpg" alt="Dennis Adam">
+                </div>
+                <div>
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+            </section>
+        
+            <section id="skills">
+                <h2>Skills</h2>
+                <p>This is where you'd list your skills.</p>
+            </section>
+        
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>This is where you'd showcase your projects.</p>
+            </section>
+        
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>This is where you'd put your contact information.</p>
+            </section>
+        </div>
     </main>
 
     <script>
         const sectionsArr = Array.from(document.querySelectorAll('section'));
         const title = document.getElementById('title');
-        const backgroundFlares = Array.from(document.querySelectorAll('.flare-background'));
+        const logo = document.getElementById('logo');
+        const backgroundFlare = document.getElementById('flare-background');
         const backgroundVideoSrc = document.getElementById('background-video-src');
+
+        const fadeGradients = {
+            'home': 'radial-gradient(ellipse at bottom right, rgba(0,0,0,0) 0%, rgba(30,30,30,0.5) 70%, rgba(30,30,30,1) 78%), radial-gradient(ellipse at top left, rgba(0,0,0,0) 0%, rgba(30,30,30,0.5) 70%, rgba(30,30,30,1) 78%)',
+            'about': 'radial-gradient(ellipse at bottom right, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 50%)',
+            'skills': 'radial-gradient(ellipse at top right, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 50%)',
+            'projects': 'radial-gradient(ellipse at top left, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 50%)',
+            'contact': 'radial-gradient(ellipse at bottom left, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 50%)',
+        };
 
         // set background video
         backgroundVideoSrc.src = "assets/2560 Aeon Fantasy 1108 Live Wallpaper_thf4.mp4";
 
-        // init title position
-        if (Math.ceil(window.scrollY) >= sectionsArr[1].offsetTop) {
-            title.style.top = '1rem';
-            title.style.left = '5rem';
-            title.style.fontSize = '1.25rem';
-        } else {
-            title.style.top = '15rem';
-            title.style.left = '15rem';
-            title.style.fontSize = '4rem';
+        function moveTitle(sectionHome = false) {                
+            if (sectionHome) {
+                title.style.top = '15rem';
+                title.style.left = '15rem';
+                title.style.fontSize = '4rem';
+                logo.style.width = '100px';
+                logo.style.height = '100px';
+            } else {
+                title.style.top = '1rem';
+                title.style.left = '5rem';
+                title.style.fontSize = '1.25rem';
+                logo.style.width = '35px';
+                logo.style.height = '35px';
+            }
         }
 
-        // init gradient
-        if (Math.ceil(window.scrollY) < sectionsArr[1].offsetTop) {
-            // home
-            backgroundFlares[1].style.opacity = 0;
-        } else if (Math.ceil(window.scrollY) < sectionsArr[2].offsetTop) {
-            // about
-            backgroundFlares[0].style.opacity = 0;
+        // Intersection Observer für aktive Sektion
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    
+                    // Update Navigation
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.toggle('active', 
+                            link.getAttribute('href') === `#${entry.target.id}`
+                        );
+                    });
+
+                    // Update Hintergrund und Titel basierend auf der Sektion
+                    if (entry.target.id === 'home') {
+                        moveTitle(true);
+                        backgroundFlare.style.backgroundImage = fadeGradients['home'];
+                    } else {
+                        moveTitle();
+                        backgroundFlare.style.backgroundImage = fadeGradients[entry.target.id] || fadeGradients['home'];
+                    }
+
+                    setTimeout(() => {
+                        removeFlareBackgroundColor();
+                    }, 500);
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px 0px -50% 0px'
+        });
+
+        // Observer für alle Sections aktivieren
+        sectionsArr.forEach(section => {
+            observer.observe(section);
+        });
+
+        function fillFlareBackgroundColor() {
+            backgroundFlare.style.backgroundColor = 'rgba(30, 30, 30)';
         }
+
+        function removeFlareBackgroundColor() {
+            backgroundFlare.style.backgroundColor = 'transparent';
+        }
+
+        removeFlareBackgroundColor();
 
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('nav ul li a');
             let lastKnownScrollPosition = window.scrollY;
             let titleInNav = window.scrollY <= sectionsArr[1].offsetTop;
+
+
+            const video = document.querySelector('video');
+            if (video) {
+                // Verhindere Pause durch Benutzer
+                video.addEventListener('pause', function(e) {
+                    e.preventDefault();
+                    video.play();
+                });
+                
+                // Starte das Video automatisch
+                video.play().catch(e => console.log('Autoplay wurde verhindert:', e));
+            }
 
             // add transition for font-size in title here to prevent animation on loading
             title.style.transition = 'top .5s, left .5s, font-size .5s';
@@ -133,65 +212,15 @@
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
+                    fillFlareBackgroundColor();
                     const target = link.getAttribute('href');
                     smoothScroll(target);
                     setActiveLink(link);
                 });
             });
 
-            // TODO use the id as parameter and search for element in function
-            function setActiveLink(activeNavElement) {                
-                navLinks.forEach((link) => link.classList.remove('active'));
-                activeNavElement.classList.add('active');
-            }
-
-            function moveTitle(sectionHome = false) {                
-                if (sectionHome) {
-                    title.style.top = '15rem';
-                    title.style.left = '15rem';
-                    title.style.fontSize = '4rem';
-                } else {
-                    title.style.top = '1rem';
-                    title.style.left = '5rem';
-                    title.style.fontSize = '1.25rem';
-                }
-            }
-
-            window.addEventListener('scroll', (event) => {
-                let nextSection = null;
-
-                if (lastKnownScrollPosition < window.scrollY) {
-                    const nextSections = sectionsArr.filter(item => {return item.offsetTop >= window.scrollY});
-                    nextSection = nextSections[0];
-
-                    window.scrollTo({
-                        top: nextSection.offsetTop,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    const nextSections = sectionsArr.filter(item => {return item.offsetTop <= Math.ceil(window.scrollY)}); // have to always round up, else it skips a section randomly sometimes (i think offsetTop automatically rounds up)
-                    nextSection = nextSections[nextSections.length - 1];
-
-                    window.scrollTo({
-                        top: nextSection.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-
-                if (nextSection.id === 'home' && titleInNav) {
-                    moveTitle(true);
-                } else {
-                    moveTitle();
-                }
-                backgroundFlares.forEach(element => {
-                    if (element.id === 'flare-background-' + nextSection.id) {
-                        element.style.opacity = 1;
-                    } else {
-                        element.style.opacity = 0;
-                    }
-                });
-
-                lastKnownScrollPosition = window.scrollY;
+            window.addEventListener('mousewheel', (event) => {
+                fillFlareBackgroundColor();
             });
 
             typeCareers(); // scripts/careerTypeWriter.js
