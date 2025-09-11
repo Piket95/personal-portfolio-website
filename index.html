@@ -34,10 +34,10 @@
 </head>
 <body>
     <nav>
-        <div id="title" style="pointer-events: none;">
-            <div style="display: flex; align-items: center; justify-content: center; pointer-events: none;">
-                <img id="logo" src="https://cdn.dennisadam.de/icons/generated-image%20%281%29.png" alt="Dennis Adam" style="margin-right: 1rem; pointer-events: none;">
-                <p style="margin: 0; pointer-events: none;">Dennis Adam</p>
+        <div id="title" class="passEvents">
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img id="logo" src="https://cdn.dennisadam.de/icons/generated-image%20%281%29.png" alt="Dennis Adam" style="margin-right: 1rem;">
+                <p style="margin: 0;">Dennis Adam</p>
             </div>
         </div>
         <ul>
@@ -71,8 +71,8 @@
                 </div>
             </section>
         
-            <section id="about" class="about-me">
-                <div class="profile-image-container">
+            <section id="about">
+                <div id="profile-image-container">
                     <img src="https://img.pr0gramm.com/2023/10/17/4b0bb7460b7e495b.jpg" alt="Dennis Adam">
                 </div>
                 <div>
@@ -82,8 +82,167 @@
             </section>
         
             <section id="skills">
-                <h2>Skills</h2>
-                <p>This is where you'd list your skills.</p>
+                <h2 style="text-align: center;">Skills</h2>
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <table id="table-skills">
+                        <tr>
+                            <td>
+                                <i class="fa-brands fa-html5"></i> HTML
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-html" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <i class="fa-brands fa-css3-alt"></i> CSS
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-css" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-brands fa-js"></i> JavaScript
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-js" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <i class="fa-brands fa-php"></i> PHP
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-php" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-brands fa-laravel"></i> Laravel
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-laravel" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <i class="fa-brands fa-vuejs"></i> VueJS
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-vuejs" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-database"></i> SQL
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-sql" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <i class="fa-brands fa-git-alt"></i> Git
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-git" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-terminal"></i> Bash
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-bash" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <i class="fa-brands fa-docker"></i> Docker
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-docker" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-brands fa-python"></i> Python
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-python" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <i class="fa-brands fa-linux"></i> Linux
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <div id="pgbs-linux" style="display: flex; width: 100%;">
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                        <div class="progress-bar" style="background-color: rgb(60, 60, 60);"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </section>
         
             <section id="projects">
@@ -104,6 +263,7 @@
         const logo = document.getElementById('logo');
         const backgroundFlare = document.getElementById('flare-background');
         const backgroundVideoSrc = document.getElementById('background-video-src');
+        const skillProgressBars = document.querySelectorAll('div[id^="pgbs-"]');
 
         const fadeGradients = {
             'home': 'radial-gradient(ellipse at bottom right, rgba(0,0,0,0) 0%, rgba(30,30,30,0.5) 70%, rgba(30,30,30,1) 78%), radial-gradient(ellipse at top left, rgba(0,0,0,0) 0%, rgba(30,30,30,0.5) 70%, rgba(30,30,30,1) 78%)',
@@ -112,6 +272,28 @@
             'projects': 'radial-gradient(ellipse at top left, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 50%)',
             'contact': 'radial-gradient(ellipse at bottom left, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 50%)',
         };
+
+        const skillsProgressBarsValues = {
+            'html': 1,
+            'css': 4,
+            'js': 5,
+            'php': 3,
+            'laravel': 2,
+            'vuejs': 2,
+            'sql': 3,
+            'git': 5,
+            'bash': 4,
+            'docker': 5,
+            'python': 2,
+            'linux': 5,
+        };
+
+        // skip to section for testing
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.getAttribute('href') === '#skills') {
+                link.click();
+            }
+        });
 
         // set background video
         backgroundVideoSrc.src = "assets/2560 Aeon Fantasy 1108 Live Wallpaper_thf4.mp4";
@@ -130,6 +312,25 @@
                 logo.style.width = '35px';
                 logo.style.height = '35px';
             }
+        }
+
+        function fillSkillProgressBars(reset = false) {
+            skillProgressBars.forEach(progressBar => {
+                if (reset) {
+                    progressBar.children.forEach(progressBarChild => {
+                        progressBarChild.style.backgroundColor = 'rgb(60, 60, 60)';
+                    });
+                } else {
+                    let i = skillsProgressBarsValues[progressBar.id.slice('pgbs-'.length)];
+                    let children = progressBar.children;
+                    (function loop(j) {
+                        if (j < i) {
+                            children[j].style.backgroundColor = '#1b9c86';
+                            setTimeout(loop.bind(null, j + 1), 100);
+                        }
+                    })(0);
+                }
+            });
         }
 
         // Intersection Observer für aktive Sektion
@@ -151,6 +352,13 @@
                     } else {
                         moveTitle();
                         backgroundFlare.style.backgroundImage = fadeGradients[entry.target.id] || fadeGradients['home'];
+                    }
+
+                    // Update Progressbar basierend auf der Sektion
+                    if (entry.target.id === 'skills') {
+                        fillSkillProgressBars();
+                    } else {
+                        fillSkillProgressBars(true);
                     }
 
                     setTimeout(() => {

@@ -10,6 +10,7 @@ html {
 
 body {
     font-family: "Poppins", system-ui;
+    font-size: 1.25rem;
     background-color: #1e1e1e;
     color: #fff;
     line-height: 1.6;
@@ -79,49 +80,8 @@ h1 {
     scroll-snap-align: start;
 }
 
-.about-me {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.about-me > div {
-    width: 50%;
-}
-
-.profile-image-container {
-    position: relative;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 2rem;
-}
-
-.profile-image-container > img {
-    max-width: auto;
-    height: 100vh;
-    margin-right: 2rem;
-    border-radius: 10px;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    -webkit-shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    shape-margin: 1em;
-    position: relative;
-}
-
-.profile-image-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 10.5rem;
-    width: 0.5rem;
-    height: 100%;
-    background-color: #1b9c86;
-    transform: rotate(9deg);
-    transform-origin: top right;
-    z-index: 2;
+.passEvents {
+    pointer-events: none;
 }
 
 .green-text {
@@ -143,6 +103,13 @@ h1 {
     width: calc(100vw - 10px);
     z-index: -1;
 
+    transition: background-color .5s;
+}
+
+.progress-bar {
+    margin-right: 5px;
+    width: 100%;
+    height: 10px;
     transition: background-color .5s;
 }
 
@@ -192,6 +159,70 @@ h1 {
 #background-video {
     object-fit: cover;
     z-index: -2;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#about > div {
+    width: 50%;
+}
+
+#profile-image-container {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+#profile-image-container > img {
+    max-width: auto;
+    height: 100vh;
+    margin-right: 2rem;
+    border-radius: 10px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    -webkit-shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    shape-margin: 1em;
+    position: relative;
+}
+
+#profile-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 10.5rem;
+    width: 0.5rem;
+    height: 100%;
+    background-color: #1b9c86;
+    transform: rotate(9deg);
+    transform-origin: top right;
+    z-index: 2;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#table-skills {
+    border-spacing: 100px 30px;
+}
+
+#table-skills td {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: 20rem;
 }
 
 ::-webkit-scrollbar {
