@@ -68,13 +68,46 @@ h1 {
 .about-me {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
-.about-me img {
-    width: 300px;
+.about-me > div {
+    width: 50%;
+}
+
+.profile-image-container {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.profile-image-container > img {
+    max-width: auto;
     height: 100vh;
     margin-right: 2rem;
     border-radius: 10px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    -webkit-shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    shape-margin: 1em;
+    position: relative;
+}
+
+.profile-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 10.5rem;
+    width: 0.5rem;
+    height: 100%;
+    background-color: #1b9c86;
+    transform: rotate(9deg);
+    transform-origin: top right;
+    z-index: 2;
 }
 
 .green-text {
