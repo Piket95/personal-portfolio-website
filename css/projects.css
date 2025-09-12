@@ -1,0 +1,36 @@
+#projects-arrow {
+    font-size: 2rem;
+    color: #818181;
+    padding-top: 4rem;
+    cursor: pointer;
+}
+
+#projects table {
+    width: 75%;
+    border-spacing: 3rem;
+}
+
+#projects td {
+    font-size: 1rem;
+    border: 1px solid #1b9c86;
+    background-color: rgba(60, 60, 60, 0.75);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+#projects td > *:not(img) {
+    margin: 1rem 1rem;
+}
+
+#projects td img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+#projects td p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

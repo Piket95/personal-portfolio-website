@@ -1,0 +1,38 @@
+.progress-bar {
+    margin-right: 5px;
+    width: 100%;
+    height: 10px;
+    transition: background-color .5s;
+}
+
+#skills > div {
+    height: 100%;
+}
+
+#skills-container {
+    padding-left: 20rem;
+    padding-right: 5rem;
+    width: 50rem;
+    height: 100%;
+}
+
+#skills-container table {
+    width: 100%;
+}
+
+#skills-container td {
+    width: 20rem;
+    padding: 1rem 3rem;
+}
+
+#reference-container {
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+}
+
+#skills-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
