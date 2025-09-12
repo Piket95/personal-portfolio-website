@@ -5,10 +5,6 @@
     transition: background-color .5s;
 }
 
-#skills > div {
-    height: 100%;
-}
-
 #skills-container {
     padding-left: 20rem;
     padding-right: 5rem;
