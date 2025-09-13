@@ -1,0 +1,12 @@
+#socials > h2 {
+    margin-bottom: 3rem;
+}
+
+
+#socials table td {
+    padding: 0 .5rem;
+}
+
+#socials table tr + tr td {
+    padding-top: .5rem;
+}

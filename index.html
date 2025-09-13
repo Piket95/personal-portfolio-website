@@ -14,7 +14,6 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://cdn.dennisadam.de/favicon.ico">
-
 	
     <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,11 +25,15 @@
     <link href="/assets/fontawesome/css/brands.css" rel="stylesheet" />
     <link href="/assets/fontawesome/css/solid.css" rel="stylesheet" />
 
+    <!-- Fork Awesome -->
+    <link rel="stylesheet" href="/assets/forkawesome/css/fork-awesome.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/socials.css">
 
     <!-- Custom JS -->
     <script src="index.js"></script>
@@ -51,7 +54,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#socials">Socials</a></li>
         </ul>
     </nav>
 
@@ -352,9 +355,34 @@
                 </div>
             </section>
         
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>This is where you'd put your contact information.</p>
+            <section id="socials" class="section-design">
+                <h2>Socials</h2>
+                <table>
+                    <tr onclick="window.open('https://github.com/Piket95', '_blank')" style="cursor: pointer;">
+                        <td>
+                            <i class="fa-brands fa-github"></i>
+                        </td>
+                        <td>Github</td>
+                    </tr>
+                    <tr onclick="window.open('https://git.dennisadam.de/', '_blank')" style="cursor: pointer;">
+                        <td>
+                            <i class="fa fa-gitea" aria-hidden="true"></i>
+                        </td>
+                        <td>Gitea</td>
+                    </tr>
+                    <tr onclick="window.open('https://www.xing.com/profile/Dennis_Adam22/web_profiles', '_blank')" style="cursor: pointer;">
+                        <td>
+                            <i class="fa-brands fa-xing"></i>
+                        </td>  
+                        <td>Xing</td>
+                    </tr>
+                    <tr onclick="window.open('https://www.linkedin.com/in/dennis-adam-0ba778216/', '_blank')" style="cursor: pointer;">
+                        <td>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </td>
+                        <td>LinkedIn</td>
+                    </tr>
+                </table>
             </section>
         </div>
     </main>
