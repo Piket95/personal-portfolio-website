@@ -80,10 +80,13 @@
     border: 1px solid #1b9c86;
     background-color: rgba(60, 60, 60, 0.75);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-    padding: 1.5rem;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+}
+
+.slide-content > *:not(img) {
+    padding: 1rem;
 }
 
 .slide-content:hover {
@@ -97,12 +100,6 @@
     object-fit: cover;
     margin-bottom: 1rem;
     border-radius: 4px;
-}
-
-.slide-content h3 {
-    margin: 0 0 0.75rem 0;
-    color: #1b9c86;
-    font-size: 1.2rem;
 }
 
 .slide-content p {
