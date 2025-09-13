@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // skip to section for testing
-    // document.querySelectorAll('nav a').forEach(link => {
-    //     if (link.getAttribute('href') === '#projects') {
-    //         link.click();
-    //     }
-    // });
+    document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === '#projects') {
+            link.click();
+        }
+    });
 
     // add transition for font-size in title here to prevent animation on loading
     title.style.transition = 'top .5s, left .5s, font-size .5s';
@@ -61,9 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             fillFlareBackgroundColor(backgroundFlare);
-            const target = link.getAttribute('href');
-            smoothScroll(target);
-            setActiveLink(link);
+            smoothScroll(link.getAttribute('href'));
         });
     });
 
