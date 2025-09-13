@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // skip to section for testing
     document.querySelectorAll('nav a').forEach(link => {
-        if (link.getAttribute('href') === '#projects') {
+        if (link.getAttribute('href') === '#skills') {
             link.click();
         }
     });

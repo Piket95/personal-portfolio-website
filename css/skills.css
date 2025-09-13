@@ -1,14 +1,35 @@
+.pgb-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .progress-bar {
     margin-right: 5px;
     width: 100%;
-    height: 10px;
+    height: .6rem;
     transition: background-color .5s;
 }
 
+#skills > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 0 10rem;
+}
+
 #skills-container {
-    padding-left: 20rem;
-    padding-right: 5rem;
-    width: 50rem;
+    flex: 8;
+    padding: 0 10rem;
+}
+
+#skills > div > img {
+    flex: 2;
+    object-fit: cover;
+    width: 0;           /* otherwise it would use the default width of the image, now flex has full control of the image width */
     height: 100%;
 }
 
@@ -24,11 +45,4 @@
 #reference-container {
     padding: 0 3rem;
     margin-bottom: 3rem;
-}
-
-#skills-table-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
