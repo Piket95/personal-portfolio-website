@@ -1,4 +1,9 @@
-
+:root {
+    --primary-color: #1e1e1e;
+    --secondary-color: #1b9c86;
+    --tertiary-color: #188a77;
+    --quaternary-color: #1e1e1e;
+}
 
 * {
     margin: 0;
@@ -23,7 +28,7 @@ body {
     line-height: 1.6;
 }
 
-section {
+section, .section-height {
     height: 100vh;
     padding-top: 60px; /* navigation bar height on top of page */
 }
@@ -63,7 +68,7 @@ nav ul li a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #1b9c86;
+    background-color: var(--secondary-color);
     transition: width 0.3s ease;
 }
 
@@ -92,7 +97,7 @@ h1 {
 }
 
 .green-text {
-    color: #1b9c86;
+    color: var(--secondary-color);
 }
 
 .typewriter::after {
@@ -139,7 +144,7 @@ h1 {
 }
 
 #line {
-    background-color: #1b9c86;
+    background-color: var(--secondary-color);
     height: 100%;
     width: 0.7rem;
     transform: rotate(20deg);
@@ -177,7 +182,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1b9c86;
+    background: var(--secondary-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {

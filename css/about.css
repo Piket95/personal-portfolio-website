@@ -1,23 +1,53 @@
-#about {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 #about > div {
-    width: 50%;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    height: 100%;
+    margin-right: 10rem;
+    gap: 5rem;
 }
 
 #profile-image-container {
+    display: grid;
+    place-items: center;
+    overflow: clip;
+    height: 100dvh;
+    padding: 0 8rem;
+}
+
+#profile-image-container > figure {
+    --skew_angle: 10deg;
+    --image_size_increase: calc((tan(var(--skew_angle))) * 100dvh);
+    width: 100%;
+    height: 100dvh;
+    transform: skew(calc(-1 * var(--skew_angle)));
+    overflow: clip;
+    border-right: 10px solid var(--secondary-color);
+}
+
+#profile-image-container > figure > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    width: calc(100% + var(--image_size_increase));
+    transform: skew(var(--skew_angle));
+    margin-left: calc(-0.5 * var(--image_size_increase));
+}
+
+#about-content {
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+}
+
+/* #about figure {
     position: relative;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: clip;
+    display: grid;
+    place-items: center;
     padding-right: 2rem;
 }
 
-#profile-image-container > img {
+#about figure > img {
     max-width: auto;
     height: 100vh;
     margin-right: 2rem;
@@ -30,15 +60,15 @@
     position: relative;
 }
 
-#profile-image-container::after {
+#about figure::after {
     content: '';
     position: absolute;
     top: 0;
     right: 11.25rem;
     width: 0.5rem;
     height: 100%;
-    background-color: #1b9c86;
+    background-color: var(--secondary-color);
     transform: rotate(9deg);
     transform-origin: top right;
     z-index: 2;
-}
+} */

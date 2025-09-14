@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // skip to section for testing
     // document.querySelectorAll('nav a').forEach(link => {
-    //     if (link.getAttribute('href') === '#socials') {
+    //     if (link.getAttribute('href') === '#about') {
     //         link.click();
     //     }
     // });
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let children = progressBar.children;
                 (function loop(j) {
                     if (j < i) {
-                        children[j].style.backgroundColor = '#1b9c86';
+                        children[j].style.backgroundColor = 'var(--secondary-color)';
                         setTimeout(loop.bind(null, j + 1), 100);
                     }
                 })(0);
