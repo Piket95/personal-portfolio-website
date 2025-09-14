@@ -46,3 +46,15 @@
     padding: 0 3rem;
     margin-bottom: 3rem;
 }
+
+@media (max-width: 1600px) {
+    #skills-container {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1920px) {
+    #skills-container {
+        padding: 0 20rem;
+    }
+}
