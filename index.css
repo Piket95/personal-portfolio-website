@@ -125,49 +125,6 @@ h1 {
     justify-content: center;
 }
 
-#title {
-    position: absolute;
-    font-weight: 600;
-
-    transition: top .5s, left .5s;
-}
-
-#home-content {
-    display: flex;
-    margin-top: 5rem;
-    margin-left: 55rem;
-    height: 75vh;
-}
-
-#diagonal-line {
-    min-width: 10vw;
-}
-
-#line {
-    background-color: var(--secondary-color);
-    height: 100%;
-    width: 0.7rem;
-    transform: rotate(20deg);
-    margin: -10 0;
-}
-
-#i-am {
-    position: relative;
-    top: 25rem;
-    left: 4rem
-}
-
-#i-am > p {
-    font-size: 2.5rem;
-    font-weight: 500;
-}
-
-#arrow {
-    position: relative;
-    padding: 0 50%;
-    animation: MoveUpDown 1s linear infinite;
-}
-
 #background-video {
     object-fit: cover;
     z-index: -2;
@@ -187,18 +144,4 @@ h1 {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #188a77;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-@keyframes MoveUpDown {
-    0%, 100% {
-        bottom: 0;
-    }
-    50% {
-        bottom: 0.5rem;
-    }
 }
