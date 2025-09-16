@@ -4,26 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.getElementById('title');
     const logo = document.getElementById('logo');
     const backgroundFlare = document.getElementById('flare-background');
-    const skillProgressBars = document.querySelectorAll('div[id^="pgbs-"]');
     const video = document.querySelector('video');
+    const skillsTable = document.getElementById('skills-table');
 
-    const skillsProgressBarsValues = {
-        'sql': 4,
-        'git': 4,
-        'bash': 1,
-        'docker': 4,
-        'python': 2,
-        'linux': 4,
-        'devops': 3,
-        'administration': 2,
-        'html': 4,
-        'css': 3,
-        'js': 4,
-        'php': 4,
-        'laravel': 4,
-        'vuejs': 3,
-        'ui-ux': 2,
-    };
+    generateSkillProgressBars(skillsTable);
 
     if (video) {
         // Verhindere Pause durch Benutzer
@@ -38,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // skip to section for testing
     // document.querySelectorAll('nav a').forEach(link => {
-    //     if (link.getAttribute('href') === '#about') {
+    //     if (link.getAttribute('href') === '#skills') {
     //         link.click();
     //     }
     // });
@@ -84,25 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function fillSkillProgressBars(reset = false) {
-        skillProgressBars.forEach(progressBar => {
-            if (reset) {
-                Array.from(progressBar.children).forEach(progressBarChild => {
-                    progressBarChild.style.backgroundColor = 'var(--quaternary-color)';
-                });
-            } else {
-                let i = skillsProgressBarsValues[progressBar.id.slice('pgbs-'.length)];
-                let children = progressBar.children;
-                (function loop(j) {
-                    if (j < i) {
-                        children[j].style.backgroundColor = 'var(--secondary-color)';
-                        setTimeout(loop.bind(null, j + 1), 100);
-                    }
-                })(0);
-            }
-        });
-    }
-
     // Intersection Observer für aktive Sektion
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -126,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Update Progressbar basierend auf der Sektion
                 if (entry.target.id === 'skills') {
-                    fillSkillProgressBars();
+                    animateSkillProgressBars();
                 } else {
-                    fillSkillProgressBars(true);
+                    animateSkillProgressBars(true);
                 }
 
                 setTimeout(() => {

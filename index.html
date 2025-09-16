@@ -40,6 +40,7 @@
     <script src="index.js"></script>
     <script src="scripts/careerTypeWriter.js"></script>
     <script src="scripts/flareBackground.js"></script>
+    <script src="scripts/skills.js"></script>
     <script src="scripts/projectSlider.js"></script>
 </head>
 <body>
@@ -113,173 +114,17 @@
                             </div>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-database"></i> SQL
-                                        <div id="pgbs-sql" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <i class="fa-brands fa-git-alt"></i> Git
-                                        <div id="pgbs-git" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-terminal"></i> Bash
-                                        <div id="pgbs-bash" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <i class="fa-brands fa-docker"></i> Docker
-                                        <div id="pgbs-docker" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-brands fa-python"></i> Python
-                                        <div id="pgbs-python" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <i class="fa-brands fa-linux"></i> Linux
-                                        <div id="pgbs-linux" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-gears"></i> DevOps
-                                        <div id="pgbs-devops" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <i class="fa-solid fa-server"></i> Server Administration
-                                        <div id="pgbs-administration" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-brands fa-html5"></i> HTML
-                                        <div id="pgbs-html" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <i class="fa-brands fa-css3-alt"></i> CSS
-                                        <div id="pgbs-css" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-brands fa-js"></i> JavaScript
-                                        <div id="pgbs-js" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <i class="fa-brands fa-php"></i> PHP
-                                        <div id="pgbs-php" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-brands fa-laravel"></i> Laravel
-                                        <div id="pgbs-laravel" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <i class="fa-brands fa-vuejs"></i> VueJS
-                                        <div id="pgbs-vuejs" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa-solid fa-display"></i> UI/UX Engineer
-                                        <div id="pgbs-ui-ux" class="pgb-container">
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                            <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        </div>
-                                    </td>
-                                </tr>
+                            <table id="skills-table">
+                                <template>
+                                    <i></i> <span data-skill-name>Skill Name</span>
+                                    <div class="pgb-container">
+                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
+                                    </div>
+                                </template>
                             </table>
                         </div>
                     </div>
