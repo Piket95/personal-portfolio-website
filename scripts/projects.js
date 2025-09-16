@@ -1,52 +1,52 @@
 const projects = [
     {
         'title': 'Projekt 1',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 2',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 3',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 4',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 5',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 6',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 7',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 8',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 9',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
     {
         'title': 'Projekt 10',
-        'image': 'assets/anime_girl_bg_image.jpg',
+        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
     },
 ]
