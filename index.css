@@ -92,6 +92,10 @@ h1 {
     scroll-snap-align: start;
 }
 
+.scroller > section:last-child {
+    margin-bottom: 60px;
+}
+
 .passEvents {
     pointer-events: none;
 }
@@ -128,6 +132,23 @@ h1 {
 #background-video {
     object-fit: cover;
     z-index: -2;
+}
+
+#footer {
+    position: relative;
+    bottom: 61px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-top: .25rem solid var(--secondary-color);
+    height: 0;
+    overflow: visible;
+    font-size: 1.1rem;
+}
+
+#footer p {
+    margin: 0;
+    padding: 1rem 2rem;
 }
 
 ::-webkit-scrollbar {
