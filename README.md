@@ -7,7 +7,7 @@ This is the source code of my personal portfolio website.
 <br>
 
 <h2>Todos</h2>
-<input type="checkbox" disabled>Responsive Design - Desktop</input><br>
+<input type="checkbox" checked=1 disabled>Responsive Design - Desktop</input><br>
 <input type="checkbox" disabled>Responsive Design - Mobile</input>
 
 <br>

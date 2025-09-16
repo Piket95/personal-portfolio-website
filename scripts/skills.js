@@ -105,28 +105,26 @@ async function generateSkillProgressBars(table) {
 }
 
 function animateSkillProgressBars(reset = false) {
-    setTimeout(() => {
-        const skillProgressBars = document.querySelectorAll('div[id^="pgbs-"]');
+    const skillProgressBars = document.querySelectorAll('div[id^="pgbs-"]');
 
-        skillProgressBars.forEach(progressBar => {
-            if (reset) {
-                Array.from(progressBar.children).forEach(progressBarChild => {
-                    progressBarChild.style.backgroundColor = 'var(--quaternary-color)';
-                });
-            } else {
-                let skillName = progressBar.id.slice('pgbs-'.length);
-                
-                if (skillName != 'reference') {
-                    let i = skillsProgressBarsValues[skillName].value;
-                let children = progressBar.children;
-                    (function loop(j) {
-                        if (j < i) {
-                            children[j].style.backgroundColor = 'var(--secondary-color)';
-                            setTimeout(loop.bind(null, j + 1), 100);
-                        }
-                    })(0);
-                }
+    skillProgressBars.forEach(progressBar => {
+        if (reset) {
+            Array.from(progressBar.children).forEach(progressBarChild => {
+                progressBarChild.style.backgroundColor = 'var(--quaternary-color)';
+            });
+        } else {
+            let skillName = progressBar.id.slice('pgbs-'.length);
+            
+            if (skillName != 'reference') {
+                let i = skillsProgressBarsValues[skillName].value;
+            let children = progressBar.children;
+                (function loop(j) {
+                    if (j < i) {
+                        children[j].style.backgroundColor = 'var(--secondary-color)';
+                        setTimeout(loop.bind(null, j + 1), 100);
+                    }
+                })(0);
             }
-        });
-    }, 100);
+        }
+    });
 }

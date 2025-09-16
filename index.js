@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const logo = document.getElementById('logo');
     const backgroundFlare = document.getElementById('flare-background');
     const video = document.querySelector('video');
-    const skillsTable = document.getElementById('skills-table');
 
-    generateSkillProgressBars(skillsTable);
+    generateSkillProgressBars(document.getElementById('skills-table'));
+    generateProjectCards(document.getElementsByClassName('slider-track')[0]);
 
     if (video) {
         // Verhindere Pause durch Benutzer
