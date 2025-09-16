@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.getElementById('title');
     const logo = document.getElementById('logo');
     const backgroundFlare = document.getElementById('flare-background');
-    const backgroundVideoSrc = document.getElementById('background-video-src');
     const skillProgressBars = document.querySelectorAll('div[id^="pgbs-"]');
     const video = document.querySelector('video');
 
@@ -89,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         skillProgressBars.forEach(progressBar => {
             if (reset) {
                 Array.from(progressBar.children).forEach(progressBarChild => {
-                    progressBarChild.style.backgroundColor = 'rgb(60, 60, 60)';
+                    progressBarChild.style.backgroundColor = 'var(--quaternary-color)';
                 });
             } else {
                 let i = skillsProgressBarsValues[progressBar.id.slice('pgbs-'.length)];

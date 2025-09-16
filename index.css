@@ -2,7 +2,7 @@
     --primary-color: #1e1e1e;
     --secondary-color: #1b9c86;
     --tertiary-color: #188a77;
-    --quaternary-color: #1e1e1e;
+    --quaternary-color: rgb(60, 60, 60);
 }
 
 * {
@@ -135,7 +135,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(60, 60, 60);
+    background: var(--quaternary-color);
 }
 
 ::-webkit-scrollbar-thumb {
