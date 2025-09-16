@@ -3,6 +3,9 @@
     --secondary-color: #1b9c86;
     --tertiary-color: #188a77;
     --quaternary-color: rgb(60, 60, 60);
+    --border-width: .25rem;
+    --border-width-image: .7rem;
+    --border-color: var(--secondary-color);
 }
 
 * {
@@ -140,7 +143,7 @@ h1 {
     left: 0;
     width: 100%;
     background-color: var(--primary-color);
-    border-top: .25rem solid var(--secondary-color);
+    border-top: var(--border-width) solid var(--border-color);
     height: 0;
     overflow: visible;
     font-size: 1.1rem;

@@ -21,7 +21,7 @@
     height: 100dvh;
     transform: skew(calc(-1 * var(--skew_angle)));
     overflow: clip;
-    border-right: 10px solid var(--secondary-color);
+    border-right: var(--border-width-image) solid var(--border-color);
 }
 
 #profile-image-container > figure > img {
@@ -38,37 +38,3 @@
     place-content: center;
     gap: 2rem;
 }
-
-/* #about figure {
-    position: relative;
-    overflow: clip;
-    display: grid;
-    place-items: center;
-    padding-right: 2rem;
-}
-
-#about figure > img {
-    max-width: auto;
-    height: 100vh;
-    margin-right: 2rem;
-    border-radius: 10px;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    -webkit-shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    shape-margin: 1em;
-    position: relative;
-}
-
-#about figure::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 11.25rem;
-    width: 0.5rem;
-    height: 100%;
-    background-color: var(--secondary-color);
-    transform: rotate(9deg);
-    transform-origin: top right;
-    z-index: 2;
-} */
