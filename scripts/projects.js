@@ -1,53 +1,68 @@
 const projects = [
     {
         'title': 'Projekt 1',
-        'image': 'assets/download (1).jpeg',
+        'image': 'assets/testfiles/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
     },
     {
         'title': 'Projekt 2',
-        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
+        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
+        'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 3',
-        'image': 'assets/download.jpeg',
+        'image': 'assets/testfiles/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
+        'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 4',
-        'image': 'assets/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
     },
     {
         'title': 'Projekt 5',
-        'image': 'assets/download.jpeg',
+        'image': 'assets/testfiles/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
     },
     {
         'title': 'Projekt 6',
-        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
+        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
+        'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 7',
-        'image': 'assets/download (1).jpeg',
+        'image': 'assets/testfiles/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
     },
     {
         'title': 'Projekt 8',
-        'image': 'assets/download.jpeg',
+        'image': 'assets/testfiles/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
+        'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 9',
-        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
+        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
+        'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 10',
-        'image': 'assets/d3413f873aca1e5f9b291e080a495fff.jpg',
+        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
+        'github': 'https://github.com/Piket95',
+        'visit': 'https://github.com/Piket95'
     },
 ]
 
@@ -68,9 +83,23 @@ function generateProjectCards(container) {
             card.className = 'project-card';
             card.innerHTML = template;
             card.querySelector('h3').textContent = project.title;
-            card.querySelector('img').src = project.image;
-            card.querySelector('img').alt = project.title;
             card.querySelector('p').textContent = project.description;
+
+            if (project.image && project.image !== '') {
+                card.querySelector('img').src = project.image;
+                card.querySelector('img').alt = project.title;
+            }
+            
+            if (project.github && project.github !== '') {
+                card.querySelector('.github-tag').href = project.github;
+                card.querySelector('.github-tag').style.display = 'block';
+            }
+            
+            if (project.visit && project.visit !== '') {
+                card.querySelector('.visit-tag').href = project.visit;
+                card.querySelector('.visit-tag').style.display = 'block';
+            }
+
             slide.appendChild(card);
         }
 

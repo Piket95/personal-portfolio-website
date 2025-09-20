@@ -13,7 +13,7 @@
     <meta name="referrer" content="no-referrer">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://cdn.dennisadam.de/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 	
     <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,15 +32,15 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/experiences.css">
     <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/socials.css">
+    <link rel="stylesheet" href="css/links.css">
 
     <!-- Custom JS -->
     <script src="index.js"></script>
     <script src="scripts/careerTypeWriter.js"></script>
     <script src="scripts/flareBackground.js"></script>
-    <script src="scripts/skills.js"></script>
+    <script src="scripts/experiences.js"></script>
     <script src="scripts/projects.js"></script>
     <script src="scripts/projectSlider.js"></script>
 </head>
@@ -48,22 +48,22 @@
     <nav>
         <div id="title" class="passEvents">
             <div style="display: flex; align-items: center; justify-content: center;">
-                <img id="logo" src="https://cdn.dennisadam.de/icons/generated-image%20%281%29.png" alt="Dennis Adam" style="margin-right: 1rem;">
+                <img id="logo" src="/assets/logo.png" alt="logo" style="margin-right: 1rem;">
                 <p style="margin: 0;">Dennis Adam</p>
             </div>
         </div>
         <ul>
             <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#socials">Socials</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#experiences">Erfahrungen</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#links">Links</a></li>
         </ul>
     </nav>
 
     <div id="flare-background" class="background flare-background" style="background-color: rgba(30, 30, 30);"></div>
     <video autoplay muted loop disablePictureInPicture id="background-video" width="100%" height="100%" class="background">
-        <source id="background-video-src" src="assets/215407.mp4" type="video/mp4">
+        <source id="background-video-src" src="/assets/testfiles/215407.mp4" type="video/mp4">
     </video>
 
     <main>
@@ -77,7 +77,7 @@
                         <div id="line"></div>
                     </div>
                     <div id="i-am" class="grid-row-2">
-                        <p>Hey! I'm a</p>
+                        <p>Hey! Ich bin ein</p>
                         <p class="typewriter green-text"></p>
                     </div>
                     <div id="arrow" class="grid-row-3">
@@ -90,59 +90,71 @@
                 <div>
                     <div id="profile-image-container">
                         <figure>
-                            <img src="assets/4b0bb7460b7e495b.jpg" alt="Dennis Adam">
+                            <img src="assets/profile_image.png" alt="profile image">
                         </figure>
                     </div>
                     <div id="about-content">
-                        <h2>About Me</h2>
+                        <h2>Über mich</h2>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </section>
         
-            <section id="skills" class="section-design">
+            <section id="experiences" class="section-design">
                 <div>
-                    <div id="skills-container">
-                        <h2 style="text-align: center;">Skills</h2>
+                    <div id="experiences-container">
+                        <h2 style="text-align: center;">Erfahrung</h2>
                         <div id="reference-container">
-                            <p>Reference</p>
+                            <p>Referenz</p>
                             <div id="pgbs-reference" class="pgb-container" style="font-size: 0.75rem;">
-                                <div class="progress-bar" style="background-color: var(--quaternary-color); height: auto !important;">Basics</div>
-                                <div class="progress-bar" style="background-color: var(--quaternary-color); height: auto !important;">Vertraut</div>
-                                <div class="progress-bar" style="background-color: var(--quaternary-color); height: auto !important;">Eigenständig</div>
-                                <div class="progress-bar" style="background-color: var(--quaternary-color); height: auto !important;">Vertiefte Erfahrung</div>
-                                <div class="progress-bar" style="background-color: var(--quaternary-color); height: auto !important;">Experte</div>
+                                <div class="progress-bar" style="background-color: var(--tertiary-color); height: auto !important;">Basics</div>
+                                <div class="progress-bar" style="background-color: var(--tertiary-color); height: auto !important;">Vertraut</div>
+                                <div class="progress-bar" style="background-color: var(--tertiary-color); height: auto !important;">Eigenständig</div>
+                                <div class="progress-bar" style="background-color: var(--tertiary-color); height: auto !important;">Vertiefte Erfahrung</div>
+                                <div class="progress-bar" style="background-color: var(--tertiary-color); height: auto !important;">Experte</div>
                             </div>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                            <table id="skills-table">
+                            <table id="experiences-table">
                                 <template>
-                                    <i></i> <span data-skill-name>Skill Name</span>
+                                    <i></i> <span data-experience-name>Experience Name</span>
                                     <div class="pgb-container">
-                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
-                                        <div class="progress-bar" style="background-color: var(--quaternary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--tertiary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--tertiary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--tertiary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--tertiary-color);"></div>
+                                        <div class="progress-bar" style="background-color: var(--tertiary-color);"></div>
                                     </div>
                                 </template>
                             </table>
                         </div>
                     </div>
-                    <img src="assets/2f53def4dd3ecfa5.jpg" alt="">
+                    <img src="assets/experiences.png" alt="experiences">
                 </div>
             </section>
         
             <section id="projects" class="section-design">
-                <h2>Projects</h2>
+                <h2>Projekte</h2>
+                <p>
+                    Hobbymäßig betreibe ich meinen eigenen gehosteten Server. Dadurch lerne ich einiges im Bereich Serveradministration und DevOps durch Hands-on Erfahrungen.
+                    Vieles davon bringe ich mir durch ausprobieren und Probleme lösen selbst bei.
+                    Alle meine Codeprojekte, die in nachfolgend aufgelistet sind, werden demnach dann auch auf diesem Server gehostet, sofern sie öffentlich gehostet werden sollen.
+                    Alle anderen Projekte befinden sich in meinen GitHub Repos oder meiner eigenen Gitea Instanz, auf die ich auf Anfrage Zugriff gewähren kann.
+                </p>
                 <div class="projects-slider">
                     <i id="projects-left-arrow" class="fa-solid fa-arrow-left projects-arrow" style="opacity: 0;" onclick="changeSlide(-1)"></i>
                     <div class="slider-container">
                         <div class="slider-track">
                             <template>
                                 <div class="slide-content">
-                                    <h3>project title</h3>
-                                    <img src="" alt="project title">
+                                    <div class="slide-content-header">
+                                        <h3>project title</h3>
+                                        <div class="tag-container">
+                                            <a class="tag github-tag" href="#" style="display: none;"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                                            <a class="tag visit-tag" href="#" style="display: none;">Visit App</a>
+                                        </div>
+                                    </div>
+                                    <img src="/assets/project-images/projects_default.jpg" alt="project title">
                                     <p>project description</p>
                                 </div>
                             </template>
@@ -152,8 +164,8 @@
                 </div>
             </section>
         
-            <section id="socials" class="section-design">
-                <h2>Socials</h2>
+            <section id="links" class="section-design">
+                <h2>Links</h2>
                 <table>
                     <tr onclick="window.open('https://github.com/Piket95', '_blank')" style="cursor: pointer;">
                         <td>

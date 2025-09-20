@@ -1,4 +1,4 @@
-const skillsProgressBarsValues = {
+const experiencesProgressBarsValues = {
     'sql': {
         'name': 'SQL',
         'value': 4,
@@ -76,9 +76,9 @@ const skillsProgressBarsValues = {
     },
 };
 
-async function generateSkillProgressBars(table) {
+async function generateExperiencesProgressBars(table) {
     const tableColumns = 2;
-    const entries = Object.entries(skillsProgressBarsValues);
+    const entries = Object.entries(experiencesProgressBarsValues);
     let template = table.querySelector('template').innerHTML;
 
     const entryLenght = entries.length;
@@ -93,7 +93,7 @@ async function generateSkillProgressBars(table) {
 
             cell.innerHTML = template;
             cell.querySelector('div').id = `pgbs-${entry[0]}`;
-            cell.querySelector('[data-skill-name]').textContent = entry[1].name;
+            cell.querySelector('[data-experience-name]').textContent = entry[1].name;
             cell.getElementsByTagName('i')[0].className = entry[1].icon;
 
             row.appendChild(cell);
@@ -104,19 +104,19 @@ async function generateSkillProgressBars(table) {
     }
 }
 
-function animateSkillProgressBars(reset = false) {
-    const skillProgressBars = document.querySelectorAll('div[id^="pgbs-"]');
+function animateExperiencesProgressBars(reset = false) {
+    const experiencesProgressBars = document.querySelectorAll('div[id^="pgbs-"]');
 
-    skillProgressBars.forEach(progressBar => {
+    experiencesProgressBars.forEach(progressBar => {
         if (reset) {
             Array.from(progressBar.children).forEach(progressBarChild => {
-                progressBarChild.style.backgroundColor = 'var(--quaternary-color)';
+                progressBarChild.style.backgroundColor = 'var(--tertiary-color)';
             });
         } else {
-            let skillName = progressBar.id.slice('pgbs-'.length);
+            let experienceName = progressBar.id.slice('pgbs-'.length);
             
-            if (skillName != 'reference') {
-                let i = skillsProgressBarsValues[skillName].value;
+            if (experienceName != 'reference') {
+                let i = experiencesProgressBarsValues[experienceName].value;
             let children = progressBar.children;
                 (function loop(j) {
                     if (j < i) {

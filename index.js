@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundFlare = document.getElementById('flare-background');
     const video = document.querySelector('video');
 
-    generateSkillProgressBars(document.getElementById('skills-table'));
+    generateExperiencesProgressBars(document.getElementById('experiences-table'));
     generateProjectCards(document.getElementsByClassName('slider-track')[0]);
 
     if (video) {
@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // skip to section for testing
-    // document.querySelectorAll('nav a').forEach(link => {
-    //     if (link.getAttribute('href') === '#skills') {
-    //         link.click();
-    //     }
-    // });
+    document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === '#projects') {
+            link.click();
+        }
+    });
 
     // add transition for font-size in title here to prevent animation on loading
     title.style.transition = 'top .5s, left .5s, font-size .5s';
@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // Update Progressbar basierend auf der Sektion
-                if (entry.target.id === 'skills') {
-                    animateSkillProgressBars();
+                if (entry.target.id === 'experiences') {
+                    animateExperiencesProgressBars();
                 } else {
-                    animateSkillProgressBars(true);
+                    animateExperiencesProgressBars(true);
                 }
 
                 setTimeout(() => {

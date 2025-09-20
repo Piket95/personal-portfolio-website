@@ -11,7 +11,7 @@
     transition: background-color .5s;
 }
 
-#skills > div {
+#experiences > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,12 +21,12 @@
     padding: 0 10rem;
 }
 
-#skills-container {
+#experiences-container {
     flex: 8;
     padding: 0 10rem;
 }
 
-#skills > div > img {
+#experiences > div > img {
     flex: 2;
     object-fit: cover;
     width: 0;           /* otherwise it would use the default width of the image, now flex has full control of the image width */
@@ -34,11 +34,11 @@
     border-left: var(--border-width-image) solid var(--border-color);
 }
 
-#skills-container table {
+#experiences-container table {
     width: 100%;
 }
 
-#skills-container td {
+#experiences-container td {
     width: 20rem;
     padding: 1rem 3rem;
 }
@@ -49,13 +49,13 @@
 }
 
 @media (max-width: 1600px) {
-    #skills-container {
+    #experiences-container {
         padding: 0;
     }
 }
 
 @media (min-width: 1920px) {
-    #skills-container {
+    #experiences-container {
         padding: 0 20rem;
     }
 }

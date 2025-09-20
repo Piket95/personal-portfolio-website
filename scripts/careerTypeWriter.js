@@ -5,7 +5,7 @@ const typeWriterMode = {
 }
 
 function typeCareers() {
-    const careers = ['fullstack web developer', 'software engineer', 'tech enthusiast', 'hobby dev ops engineer', 'UI/UX engineer'];
+    const careers = ['Fullstack Webentwickler', 'Software Engineer', 'Tech Enthusiast', 'Hobby DevOps Engineer', 'Hobby Automation Engineer', 'Hobby UI/UX Engineer'];
     const careerElement = document.querySelector('#i-am .typewriter');
     let previousElement = null;
     let newRandomCareer = careers[0];
@@ -44,6 +44,11 @@ function typeCareers() {
                 // call typewriter again endlessly
                 setTimeout(typeWriter, intervalTimeout);
             }
+        } else {
+            // fallback reset typwriter in case it gets here to prevent crashes
+            careerElement.innerHTML = careers[0];
+            mode = typeWriterMode.TYPE;
+            setTimeout(typeWriter, 1000);
         }
     }
 
