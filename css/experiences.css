@@ -26,14 +26,6 @@
     padding: 0 10rem;
 }
 
-#experiences > div > img {
-    flex: 2;
-    object-fit: cover;
-    width: 0;           /* otherwise it would use the default width of the image, now flex has full control of the image width */
-    height: 100%;
-    border-left: var(--border-width-image) solid var(--border-color);
-}
-
 #experiences-container table {
     width: 100%;
 }
