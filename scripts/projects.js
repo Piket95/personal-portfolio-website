@@ -1,20 +1,17 @@
 const projects = [
     {
         'title': 'Projekt 1',
-        'image': 'assets/testfiles/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
     },
     {
         'title': 'Projekt 2',
-        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
         'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 3',
-        'image': 'assets/testfiles/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
         'visit': 'https://github.com/Piket95'
@@ -26,40 +23,34 @@ const projects = [
     },
     {
         'title': 'Projekt 5',
-        'image': 'assets/testfiles/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
     },
     {
         'title': 'Projekt 6',
-        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
         'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 7',
-        'image': 'assets/testfiles/download (1).jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
     },
     {
         'title': 'Projekt 8',
-        'image': 'assets/testfiles/download.jpeg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
         'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 9',
-        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
         'visit': 'https://github.com/Piket95'
     },
     {
         'title': 'Projekt 10',
-        'image': 'assets/testfiles/d3413f873aca1e5f9b291e080a495fff.jpg',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus, nisl ut dignissim aliquet.',
         'github': 'https://github.com/Piket95',
         'visit': 'https://github.com/Piket95'
